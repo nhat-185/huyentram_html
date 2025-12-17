@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Bầu Trời Đầy Sao & Tuyết Rơi</title>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        height: 100vh;
+        background: radial-gradient(circle at 20% 20%, #1a0a3a, #000 70%),
+                    radial-gradient(circle at 80% 70%, #2a0a5a, #000 80%),
+                    radial-gradient(circle at 50% 50%, #0a2a6a, #000 80%);
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Ngôi sao lấp lánh */
+    .star {
+        position: fixed;
+        width: 2px;
+        height: 2px;
+        background: white;
+        border-radius: 50%;
+        animation: twinkle 2s infinite alternate;
+        opacity: 0.8;
+        pointer-events: none;
+    }
+
+    @keyframes twinkle {
+        from { opacity: 0.3; }
+        to   { opacity: 1; }
+    }
+
+    /* Tuyết rơi */
+    .snowflake {
+        position: fixed;
+        top: -10px;
+        color: #ffffff;
+        font-size: 1em;
+        animation: fall linear infinite;
+        filter: drop-shadow(0 0 5px white);
+        pointer-events: none;
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(110vh);
+            opacity: 0.3;
+        }
+    }
+
+    .content {
+        padding: 50px;
+        font-size: 28px;
+        text-align: center;
+    }
+    {font-family: Arial;
+            background-color: #F2F7FF;
+            padding: 20px;}
+        h1 {color: yellow;
+            text-align: center;}
+        h2 {
+            color: lime;
+        }
+        table {border-collapse: collapse;
+               width: 100%;}
+        table, th, td {border: 1px solid #333;
+                       padding: 12px;}
+</style>
+</head>
+<body>
+<script>
+// Tạo sao ngẫu nhiên
+for (let i = 0; i < 200; i++) {
+    let star = document.createElement("div");
+    star.classList.add("star");
+    star.style.left = Math.random() * window.innerWidth + "px";
+    star.style.top = Math.random() * window.innerHeight + "px";
+    star.style.animationDuration = (Math.random() * 3 + 1) + "s";
+    document.body.appendChild(star);
+}
+
+// Tạo tuyết rơi liên tục
+function createSnow() {
+    const snow = document.createElement("div");
+    snow.classList.add("snowflake");
+    snow.textContent = "";
+    snow.style.left = Math.random() * window.innerWidth + "px";
+    snow.style.fontSize = (Math.random() * 20 + 10) + "px";
+    snow.style.animationDuration = (Math.random() * 4 + 3) + "s";
+    snow.style.opacity = Math.random();
+    document.body.appendChild(snow);
+    setTimeout(() => snow.remove(), 8000);
+}
+setInterval(createSnow, 120);
+</script>
+
+</body>
+<body>
+    <h1>CHÚC MỪNG GIÁNG SINH<br>
+   MERRY CHRISTMAS</h1>
+
+    <h2>1. Lễ Giáng Sinh là gì?</h2>
+    <p>
+        <b> Lễ Giáng Sinh</b> (Christmas) còn được gọi là <b>Noel</b>, là một trong những ngày lễ quan trọng và được mong chờ nhất trên thế giới. Lễ Giáng Sinh được tổ chức vào ngày <b>25 tháng 12</b> hàng năm kỷ niệm sự ra đời của <b>Chúa Giê-su – Đấng Cứu Thế</b> trong tín ngưỡng Kitô giáo. Theo niềm tin của Kitô hữu, sự xuất hiện của Ngài mang lại ánh sáng, hy vọng và sự cứu rỗi cho nhân loại.
+       Giáng sinh mang tinh thần đoàn kết, yêu thương và sẻ chia giữa người với người. Ở nhiều nơi trên thế giới, lễ Giáng Sinh được tổ chức với những phong tục, biểu tượng và hoạt động đặc trưng như trang trí <b>cây thông Noel, tặng quà cho nhau,…</b></i>
+    </p>
+    <h2>2. Câu chuyện Giáng Sinh:</h2>
+    <ue>
+        <b> Giáng Sinh năm bà tôi qua đời</b><br><br>
+        Năm đó, bà tôi qua đời trước Giáng Sinh chỉ đúng một tuần rưỡi. Chúng tôi đã nghĩ rằng Giáng Sinh năm ấy chắc chắn là mùa Giáng Sinh tệ nhất mà gia đình phải trải qua cùng nhau. Đêm Giáng Sinh, chúng tôi cùng dùng bữa bên nhau trong bầu không khí im lặng. Một sự im lặng đầy ái ngại và lúng túng. Nhưng rồi – một câu nói của ông chúng tôi đã cứu vãn không khí năm ấy.<br>
+Ông bảo – ông rất biết ơn vì mọi người đã ở bên ông vào mùa Giáng Sinh năm đó. Đó là khoảng thời gian khó khăn nhất cuộc đời mà ông phải trải qua. Cảm giác khi mà người yêu thương và bên cạnh ông suốt chặng đường dài đã ra đi. Và tôi chẳng bao giờ quên được Giáng Sinh năm đó cũng chính là một bài học dành cho tôi. Ông nội đã dạy tôi biết rằng <b>dù có ra sao đi chăng nữa, chúng ta đều phải cùng nhau vượt qua, yêu thương những người còn bên cạnh chúng ta mỗi ngày.</b>
+
+    <h2>3. Danh sách các món quà tặng ý nghĩa trong dịp Giáng Sinh:</h2>
+    <ul>
+        <li>Thiệp Giáng Sinh</li>
+        <li>Bánh quy, bánh cupcake Noel</li>
+        <li>Nến thơm</li>
+        <li>Tất họa tiết Noel</li>
+        <li>Khăn choàng</li>
+        <li>Ly, cốc in hình xinh xắn</li>
+        <li>Găng tay, mũ len</li>
+    </ul>
+
+    <h2>4. Bảng chi tiêu mua nguyên liệu làm bánh mini cookies:</h2>
+    <table>
+        <tr>
+            <th>Tên nguyên liệu</th>
+            <th>Định lượng</th>
+            <th>Giá tiền</th>
+        </tr>
+        <tr>
+            <td>Bơ lạt</td>
+            <td>80g</td>
+            <td>12.000 VNĐ</td>
+        </tr>
+        <tr>
+            <td>Bột mì đa dụng (Số 11)</td>
+            <td>250g</td>
+            <td>10.500 VNĐ</td>
+        </tr>
+        <tr>
+            <td>Bột nở</td>
+            <td>50g</td>
+            <td>9.000 VNĐ</td>
+        </tr>
+        <tr>
+            <td>Trứng gà</td>
+            <td>44g</td>
+            <td>4.000 VNĐ</td>
+        </tr>
+        <tr>
+            <td>Đường</td>
+            <td>100g</td>
+            <td>2.000 VNĐ</td>
+        </tr>
+        <tr>
+            <td>Socola chip</td>
+            <td>50g</td>
+            <td>11.500 VNĐ</td>
+        </tr>
+    </table>
+
+    <h2>5. Liên kết bài hát Giáng Sinh:</h2>
+    <p>
+        Nghe nhạc tại đây: <a href="https://youtu.be/E8gmARGvPlI?si=DJ-Wn-wIUxrVFbuO" target="_blank"> Wham! - Last Christmas (Official Video)</a> 
+    </p>
+
+    <h2>6. Hình ảnh – Âm thanh – Video:</h2>
+
+    <p><b>Hình ảnh về Giáng Sinh:</b></p>
+    <img src="https://www.anxietycentre.com/wp-content/uploads/2017/04/7-ways-to-have-a-less-anxious-Christmas.jpg" alt="Hình ảnh về Giáng Sinh" width="500px" height="auto"/>
+
+    <p><b>Âm thanh (nhạc Giáng Sinh):</b></p>
+    <audio controls autoplay loop>
+        <source src="https://cdn.pixabay.com/audio/2025/11/26/audio_f8ecd97359.mp3" type="audio/mp3"/>
+    </audio>
+
+    <p> <b>Video về ý nghĩa lễ Giáng Sinh:</b>
+    </p>
+    <iframe width="480" height="315" src="https://www.youtube.com/embed/A7fEeo-o1e4?si=McPo4uo6gi4GIspS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
